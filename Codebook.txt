@@ -1,0 +1,31 @@
+
+What is the scope? 
+------------------
+The scope of the function runAnalysisR () is to aggregate specific values by subjects (30 testpersons) 
+and activities (6 types). Not all variable were relavant for this data analysis (see Step 6). 
+The aggregated values are calculated with the mean fucntion.
+
+
+What is the experiment? 
+-------------------------
+The following video show the experiment were the gathered data came from:
+https://www.youtube.com/watch?v=XOEN9W05_4A
+
+Which datas were elaborated? 
+----------------------------
+Following data were unziped locally:  
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+What does the runAnalysisR () script do? 
+-----------------------------------------
+
+1. The zip file was downloadead locally in the path defined in the input variable   
+   # runAnalysisR ("/Users/tzhsami6/Downloads/UCI HAR Dataset")
+2. A differentiation is done between training and testing data 
+ - testing data and training data is readed separately 
+3. Training and test records were merged
+4. Both data were labeled by activities (1 WALKING, 2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING)
+5. The columns  were renamed properly  
+6. Only the variables containing mean and std were selected
+7. The average of each selected variable is done by activity and each subject (30 Testing Persons).
+8. Output is written in a txt file -> "MergeTraintest3.txt" provided as result 
